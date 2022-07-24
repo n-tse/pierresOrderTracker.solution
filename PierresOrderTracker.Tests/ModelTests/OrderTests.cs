@@ -17,9 +17,23 @@ namespace PierresOrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("descrition", "title", 1, "date");
+      Order newOrder = new Order("description", "title", 1, "date");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
-    
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      //Arrange
+      string description = "bread";
+      string title = "title";
+      int price = 1;
+      string date = "January 1";
+      //Act
+      Order newOrder = new Order(description, title, price, date);
+      string result = newOrder.Description;
+      //Assert
+      Assert.AreEqual(description, result);
+    }
   }
 }
