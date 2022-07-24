@@ -80,5 +80,22 @@ namespace PierresOrderTracker.Tests
       //Assert
       Assert.AreEqual(date, result);
     }
+
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      //Arrange
+      string description = "bread";
+      string title = "title";
+      int price = 1;
+      string date = "January 1";
+      Order newOrder = new Order(description, title, price, date);
+      //Act
+      string updatedDescription = "pastries";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
+    }
   }
 }
