@@ -97,5 +97,17 @@ namespace PierresOrderTracker.Tests
       //Assert
       Assert.AreEqual(updatedDescription, result);
     }
+
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string description = "bread";
+      string title = "title";
+      int price = 1;
+      string date = "January 1";
+      Order newOrder = new Order(description, title, price, date);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
   }
 }
