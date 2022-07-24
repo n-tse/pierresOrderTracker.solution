@@ -11,7 +11,7 @@ namespace PierresOrderTracker.Controllers
     [HttpGet("/vendors")]
     public ActionResult Index()
     {
-      List<Category> allVendors = Vendors.GetAll();
+      List<Vendor> allVendors = Vendor.GetAll();
       return View(allVendors);
     }
 
