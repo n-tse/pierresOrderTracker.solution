@@ -35,5 +35,20 @@ namespace PierresOrderTracker.Tests
       //Assert
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void GetTitle_ReturnsTitle_String()
+    {
+      //Arrange
+      string description = "bread";
+      string title = "title";
+      int price = 1;
+      string date = "January 1";
+      //Act
+      Order newOrder = new Order(description, title, price, date);
+      string result = newOrder.Title;
+      //Assert
+      Assert.AreEqual(title, result);
+    }
   }
 }
