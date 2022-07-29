@@ -30,7 +30,7 @@ The project is a simple web application that allows the user to keep track of ve
 
 ## Known Bugs
 
-* "Add a new order" functionality is bugged
+* No known bugs
 
 ## License
 
